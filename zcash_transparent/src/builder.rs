@@ -489,9 +489,8 @@ impl Bundle<Unauthorized> {
     #[cfg(feature = "transparent-inputs")]
     pub fn apply_external_signatures_old(
         self,
-        #[cfg(feature = "transparent-inputs")] signatures: Vec<secp256k1::ecdsa::Signature>,
+        signatures: Vec<secp256k1::ecdsa::Signature>,
     ) -> Bundle<Authorized> {
-        #[cfg(feature = "transparent-inputs")]
         let script_sigs = {
             assert_eq!(
                 self.authorization.inputs.len(),

@@ -466,7 +466,7 @@ impl Bundle<Unauthorized> {
 
     /// Prepares the bundle for staged application of external signatures.
     #[cfg(feature = "transparent-inputs")]
-    pub fn prepare_transparent_signatures<'a>(
+    pub fn prepare_transparent_signatures2<'a>(
         self,
         sighashes: &'a [[u8; 32]],
         secp_ctx: &'a secp256k1::Secp256k1<secp256k1::VerifyOnly>,

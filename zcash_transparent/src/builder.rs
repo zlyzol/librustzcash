@@ -486,6 +486,7 @@ impl Bundle<Unauthorized> {
         })
     }
 
+    #[cfg(feature = "transparent-inputs")]
     pub fn apply_external_signatures_old(
         self,
         #[cfg(feature = "transparent-inputs")] signatures: Vec<secp256k1::ecdsa::Signature>,
